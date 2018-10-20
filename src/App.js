@@ -9,7 +9,14 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <ImgLogo/>
-        <DefaultParagraph text="Paragraph with props"/>
+        <DefaultParagraph 
+          text="Paragraph with props"
+          color="red"
+        />
+        <DefaultParagraph 
+          text="Getting the same component to write this paragraph"
+          color="blue"
+        />
       </header>
     </div>
   );

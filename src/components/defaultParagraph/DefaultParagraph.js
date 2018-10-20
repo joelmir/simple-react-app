@@ -1,8 +1,8 @@
 import React from 'react';
 
-const DefaultParagraph = ({text}) => {
+const DefaultParagraph = ({text, color}) => {
     return(
-        <p>
+        <p style={{color: color}}>
             {text}
         </p>
     );
