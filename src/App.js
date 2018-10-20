@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <ImgLogo/>
-        <DefaultParagraph/>
+        <DefaultParagraph text="Paragraph with props"/>
       </header>
     </div>
   );

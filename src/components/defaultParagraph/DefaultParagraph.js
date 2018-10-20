@@ -1,9 +1,9 @@
 import React from 'react';
 
-const DefaultParagraph = () => {
+const DefaultParagraph = ({text}) => {
     return(
         <p>
-            My stateless component
+            {text}
         </p>
     );
 }
