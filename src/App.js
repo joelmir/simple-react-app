@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import ImgLogo from './components/imgLogo/ImgLogo'
+import DefaultParagraph from './components/defaultParagraph/DefaultParagraph'
+
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          My stateless component
-        </p>
+        <ImgLogo/>
+        <DefaultParagraph/>
       </header>
     </div>
   );
