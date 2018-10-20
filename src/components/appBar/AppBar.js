@@ -7,8 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: {
@@ -76,11 +77,11 @@ function SearchAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <MenuIcon />
+          <IconButton className={classes.menuButton} component={Link} to='/'  color="inherit" aria-label="Open drawer">
+            <HomeIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Material-UI
+            Simple ReactJS app 
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>

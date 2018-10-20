@@ -1,47 +1,20 @@
-import React, { Component } from 'react';
-import ImgLogo from './components/imgLogo/ImgLogo'
-import DefaultParagraph from './components/defaultParagraph/DefaultParagraph'
-import DummyFunction from './components/dummyFunction/DummyFunction'
-import Search from './components/search/Search'
+import React from 'react'
+import { HashRouter, Route } from "react-router-dom"
+import CursoScreen from './screens/CursoScreen'
+import HomeScreen from './screens/HomeScreen'
 import AppBar from './components/appBar/AppBar'
 
-import './App.css';
 
-
-class App extends Component {
-    constructor() {
-        super()
-        this.state = {
-            searchTerm: 'Search'
-        }
-    }
-
-    render(){
-        const dummyFunction = (myValue) => {
-            console.log(myValue)
-            this.setState({
-                searchTerm: myValue
-            })
-        }
-        return (
-            <div className="App">
+const App = () => {
+    return(
+        <HashRouter>
+            <div>
                 <AppBar/>
-                <header className="App-header">
-                    <ImgLogo/>
-                    <Search onSubmit={dummyFunction}/>
-                    <DefaultParagraph 
-                        text={this.state.searchTerm}
-                        color="red"
-                    />
-                    <DefaultParagraph 
-                        text="Getting the same component to write this paragraph"
-                        color="blue"
-                    />
-                    <DummyFunction func={dummyFunction}/>
-                </header>
+                <Route path="/:any_param" component={CursoScreen}/>
+                <Route exact path="/" component={HomeScreen}/>
             </div>
-        );
-      }
+        </HashRouter>
+    );
 }
 
-export default App;
+export default App
